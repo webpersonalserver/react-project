@@ -1,3 +1,5 @@
+// 公共action方法
+
 // 更新所有登录态信息(包含：isLogin、tokenid、userInfo等)
 const updateLoginState = (payload) => {
   return {
