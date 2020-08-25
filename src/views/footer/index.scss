@@ -1,7 +1,57 @@
+@import '../../utils/scss/common.scss';
+
 .footer{
   width: 100%;
-  height: 100px;
   overflow: hidden;
   box-sizing: border-box;
-  background: green;
+  background: $colors1;
+
+  &-module{
+    width: $normalWidth;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  &__left{
+    text-align: left;
+
+    &_jump{
+      color: $colors2;
+      font-size: $fontSize12;
+      margin-bottom: $mb10;
+      display: inline-block;
+
+      &:hover{
+        color: $colors3;
+        text-decoration-line: underline;
+      }
+    }
+    &_option{
+      color: $colors2;
+      font-size: $fontSize12;
+      margin-bottom: $mb10;
+    }
+  }
+  &__right{
+    display: flex;
+
+    &_code{
+      width: 120px;
+      height: 120px;
+    }
+    &_mark{
+      width: 30px;
+      height: 120px;
+      padding: 5px;
+      overflow: hidden;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: $colors5;
+      font-size: $fontSize14;
+      color: $colors4;
+    }
+  }
 }

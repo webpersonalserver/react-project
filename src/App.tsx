@@ -25,7 +25,8 @@ class App extends React.Component<IProps, IState> {
     setTimeout(() => {
       this.props.dispatch(updateLoginState({
         isLogin: true,
-        tokenid: '123'
+        tokenid: '123',
+        userInfo: {name: '测试'}
       }))
     }, 2000)
   }
@@ -51,9 +52,11 @@ class App extends React.Component<IProps, IState> {
     const { childRoutes, currentRouteMeta } = this.handleCurrentRoute()
     
     return (
-      <div className="App">
+      <div className="App" style={{paddingTop: currentRouteMeta.isNeedHeader ? '40px' : 0}}>
         { currentRouteMeta.isNeedHeader ? <Header /> : null }
-        {renderRoutes(childRoutes)}
+        <div className="App-page">
+          {renderRoutes(childRoutes)}
+        </div>
         { currentRouteMeta.isNeedFooter ? <Footer /> : null }
       </div>
     )
